@@ -1,0 +1,58 @@
+body{
+  font-family: 'Oxygen', sans-serif;
+  line-height: 200%;
+}
+
+.navbar .navbar-text{
+  text-decoration: underline;
+  color: black;
+}
+
+.my-name{
+  color: red;
+}
+
+.right-links{
+  margin-top: 2px;
+  padding-right: 5px;
+}
+
+.border{
+  border: solid 1px black;
+}
+
+.link:hover{
+  background-color: #C2EBFF;
+}
+
+.container{
+  padding-top: 80px;
+}
+
+.project{
+  height: 250px;
+}
+
+.about-me-section{
+  padding-bottom: 30px;
+  }
+
+.portfolio-section{
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.resume-section{
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.contact-section{
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.icon{
+  font-size: 50px;
+  color: black;
+}
