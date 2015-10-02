@@ -11,11 +11,13 @@ body{
 
 .navbar{
   background-color: #E5E5E5;
+  border-bottom: 1px solid #C2EBFF;
 }
 
 h1{
-  text-decoration: underline;
+  /*text-decoration: underline;*/
   padding-bottom: 10px;
+  border-bottom: 2px solid #C2EBFF;
 }
 
 .right-links{
