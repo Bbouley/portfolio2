@@ -2,7 +2,7 @@
 <html lang="en" ng-app='myApp'>
   <head>
     <meta charset="utf-8">
-    <title>Untitled</title>
+    <title>Bradley Bouley</title>
 
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
-  <body>
+  <body ng-controller = 'myController'>
 
     <nav class = 'navbar navbar-default navbar-fixed-top'>
       <div class = 'container-fluid'>
@@ -45,10 +45,25 @@
       <div class = 'portfolio-section col-xs-12'>
       <a name = 'portfolio' class = "anchor"></a>
         <h1>Projects</h1>
-        <div class = 'col-xs-4 project border'>
+
+        <div ng-repeat = 'project in projects' class = 'text-center'>
+
+          <div class = 'col-xs-4 project-technologies ' ng-show = 'showTitle' ng-style = "{'background' : '{{  project.image }}', 'background-size' : 'contain'}">
+            <p>Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.</p>
+            <div class = ' project-title'>
+              <h4>{{ project.title }}</h4>
+            </div>
+          </div>
+  <!--         <div class = 'col-xs-4 project-description ' ng-hide = 'showTitle' ng-mouseleave = 'showTitle = true' ng-style = "{'background-image' : 'url({{project.image}})'}">
+            <p>{{ project.description }}</p>
+            <div class = ' col-xs-12 project-title'>
+             <h4>{{ project.title }}</h4>
+            </div>
+          </div> -->
+
+
         </div>
-        <div class = 'col-xs-4 project border'>
-        </div>
+
         <div class = 'col-xs-4 project border'>
         </div>
         <div class = 'col-xs-4 project border'>
@@ -61,6 +76,17 @@
 
       <div class = 'portfolio-section col-xs-12'>
         <h1>Apps</h1>
+
+         <div ng-repeat = 'app in apps' class = 'text-center'>
+
+          <div class = 'col-xs-4 project-technologies' ng-show = 'showTitle' ng-style = "{'background' : '{{  app.image }}' , 'background-size' : 'cover' }">
+            <p>Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.</p>
+            <div class = ' project-title'>
+              <h4>{{ app.title }}</h4>
+            </div>
+          </div>
+        </div>
+
         <div class = 'col-xs-4 project border'>
         </div>
         <div class = 'col-xs-4 project border'>
@@ -89,8 +115,8 @@
 
       <div class = 'col-xs-12 contact-section'>
        <a name = 'contact' class = "anchor"></a>
-      <a href = 'https://www.linkedin.com/pub/bradley-bouley/b7/788/221'><i class="fa fa-linkedin col-xs-offset-4 col-xs-3 icon"></i></a>
-      <a href = 'https://github.com/Bbouley'><i class="fa fa-github-alt col-xs-3 icon"></i></a>
+      <a href = 'https://www.linkedin.com/pub/bradley-bouley/b7/788/221' target="_blank"><i class="fa fa-linkedin col-xs-offset-4 col-xs-3 icon"></i></a>
+      <a href = 'https://github.com/Bbouley' target="_blank"><i class="fa fa-github-alt col-xs-3 icon"></i></a>
       </div>
 
     </div>
@@ -104,6 +130,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script type="text/javascript" src="js/projects.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/angular.js"></script>
   </body>
